@@ -15,13 +15,12 @@ $ brew install boost-python3
 ```
 #### 2. Install Machina
 ```bash
-$ python setup install
+$ python setup.py install
 ```
 The command should build the binary file from c++ code, and the link it to python.
 
 ### Potential Installation Issues
-#### 1. `pyconfig.h` not found
-find include path for python
-```bash
-$ export CPLUS_INCLUDE_PATH
-```
+#### 1. `boost-python36` library not found
+Find the specific version of boost-python you have installed to your system. It might be
+`boost-python`, `boost-python3` or `boost-python34`, etc. Then replace the correct version
+at line 13 in `setup.py` file, and re-run the installation command.
